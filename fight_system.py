@@ -182,7 +182,6 @@ def Fight(userid, monsterid):
     elif energy == 0 :
         print('No energy')
 
-        cur.execute("UPDATE User_Info SET 현재행동력 = ? WHERE id = ?", (10, userid,))
         # 비전투
 
 
