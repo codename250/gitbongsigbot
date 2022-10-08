@@ -18,10 +18,10 @@ def charge_energy():
     if i!=0:
         cur.execute("SELECT * FROM User_Info")  # *는 전부라는 의미, 따라서 users로부터 모든것을 선택
         nowen= cur.fetchall()
-        for usernum in range(0,len(maxen)):
+        for usernum in range(0,len(maxen)-1):
             
             
-            aa=nowen[usernum][0]
+            aa=nowen[usernum][1]
             
             
             newenergy=nowen[usernum][14]+1
@@ -33,7 +33,7 @@ def charge_energy():
             else :
                 print('Energy is already max')
 
-        threading.Timer(10, charge_energy).start()
+        
             
 
         i=i+1
